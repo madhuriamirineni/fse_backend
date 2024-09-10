@@ -1,0 +1,91 @@
+get http://localhost:4000/user-api/users
+
+###
+
+post http://localhost:4000/user-api/register
+Content-Type: application/json
+
+{
+    "firstName":"Madhuri",
+    "lastName":"Amirineni",
+    "email":"madhuri@gmail.com",
+    "loginId":"1",
+    "password":"madhu@123",
+    "confirmPassword":"madhu@123",
+    "contactNumber":9390373998
+}
+###
+post http://localhost:4000/user-api/register
+Content-Type: application/json
+
+{
+    "firstName":"Madhavi",
+    "lastName":"Jarugu",
+    "email":"madhavi@gmail.com",
+    "loginId":"4",
+    "password":"mad123",
+    "confirmPassword":"mad123",
+    "contactNumber":9390699282
+}
+###
+
+
+post http://localhost:4000/user-api/login
+Content-Type: application/json
+
+{
+    "loginId":"4",
+    "password":"mad123"
+}
+
+###
+post http://localhost:4000/user-api/1/forgot
+Content-Type: application/json
+
+{
+    "newPassword":"newmadhu@123",
+    "confirmNewPassword":"newmadhu@123"
+}
+
+###
+
+post http://localhost:4000/movie-api/movie
+Content-Type: application/json
+
+{
+    "movieName":"Bahubali",
+    "theatreName":"Atrium mall",
+    "totalTickets":100
+    
+}
+
+###
+
+get http://localhost:4000/movie-api/all
+
+###
+
+get http://localhost:4000/movie-api/search/Bahubali
+
+
+
+###
+
+post http://localhost:4000/ticket-api/Bahubali/add
+Content-Type: application/json
+
+{
+    "movieName":"Bahubali",
+    "theatreName":"Atrium mall",
+    "numOfTickets":2,
+    "seatNumber":"A3,A4",
+    "user":"66c447a57a492dbe6c91d016"
+}
+
+###
+
+put http://localhost:4000/ticket-api/Bahubali/update/0
+
+###
+
+delete http://localhost:4000/ticket-api/Bahubali/delete/66c48e9707fdcdc33d9a3e18
